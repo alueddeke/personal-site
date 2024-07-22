@@ -6,7 +6,18 @@ export default {
       colors: {
         mint: "#D1E8E2",
         "deep-teal": "#19747E",
-        "sky-blue": "#A9D6E5",
+        "sky-blue": {
+          DEFAULT: "#A9D6E5",
+          100: "#F0F8FB",
+          200: "#D4EAF3",
+          300: "#A9D6E5", // original sky-blue
+          400: "#7EC2D7",
+          500: "#53AECA",
+          600: "#3497B7",
+          700: "#287690",
+          800: "#1C5569",
+          900: "#103341",
+        },
         "light-gray": "#E2E2E2",
         "dark-text": "#020808",
         "off-white": "#F8F8F8",

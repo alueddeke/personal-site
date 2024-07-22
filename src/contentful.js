@@ -38,6 +38,9 @@ export const getContentfulData = async () => {
     if (item.fields.backgrounds) {
       item.fields.backgrounds = item.fields.backgrounds.map(resolveAsset);
     }
+    if (item.fields.avatar) {
+      item.fields.avatar = resolveAsset(item.fields.avatar);
+    }
 
     // Resolve project links to actual entry data
     if (item.fields.projects) {

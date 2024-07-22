@@ -40,7 +40,7 @@ function ProjectCard({ project }) {
         {!isExpanded && (
           <button
             onClick={toggleDescription}
-            className="text-blue-500 hover:text-blue-700 mb-4"
+            className="text-sky-blue-500 hover:text-sky-blue-700 mb-4"
           >
             Read More
           </button>
