@@ -5,6 +5,9 @@ import Music from "./components/Music";
 import Loading from "./components/Loading";
 import Error from "./components/Error";
 import AboutMe from "./components/AboutMe";
+import Teaching from "./components/Teaching";
+import Projects from "./components/Projects";
+import ContactMe from "./components/ContactMe";
 
 function App() {
   const [data, setData] = useState(null);
@@ -45,7 +48,15 @@ function App() {
         pictures={data.fields.pictures}
         backgroundImage={data.fields.backgrounds?.[10]}
       />
-      {/* Other sections will be added here */}
+      <Teaching pictures={data.fields.pictures} bio={data.fields.bio} />
+      <Projects
+        projects={data.fields.projects}
+        backgroundImage={data.fields.backgrounds?.[0]}
+      />
+      <ContactMe
+        backgroundImage={data.fields.backgrounds?.[2]}
+        contact={data.fields.contact}
+      />
     </div>
   );
 }

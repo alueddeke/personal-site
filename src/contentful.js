@@ -23,22 +23,36 @@ export const getContentfulData = async () => {
 
     const item = response.data.items[0];
     const assets = response.data.includes.Asset;
+    const entries = response.data.includes.Entry;
+
+    // Helper function to resolve asset links
+    const resolveAsset = (assetLink) =>
+      assets.find((asset) => asset.sys.id === assetLink.sys.id);
 
     // Resolve picture links to actual asset data
     if (item.fields.pictures) {
-      item.fields.pictures = item.fields.pictures.map((pictureLink) =>
-        assets.find((asset) => asset.sys.id === pictureLink.sys.id)
-      );
+      item.fields.pictures = item.fields.pictures.map(resolveAsset);
     }
 
     // Resolve background links to actual asset data
     if (item.fields.backgrounds) {
-      item.fields.backgrounds = item.fields.backgrounds.map((backgroundLink) =>
-        assets.find((asset) => asset.sys.id === backgroundLink.sys.id)
-      );
+      item.fields.backgrounds = item.fields.backgrounds.map(resolveAsset);
     }
 
-    // console.log("Processed Contentful data:", JSON.stringify(item, null, 2));
+    // Resolve project links to actual entry data
+    if (item.fields.projects) {
+      item.fields.projects = item.fields.projects.map((projectLink) => {
+        const project = entries.find(
+          (entry) => entry.sys.id === projectLink.sys.id
+        );
+        if (project && project.fields.thumbnail) {
+          project.fields.thumbnail = resolveAsset(project.fields.thumbnail);
+        }
+        return project;
+      });
+    }
+
+    console.log("Processed Contentful data:", JSON.stringify(item, null, 2));
 
     return item;
   } catch (error) {
