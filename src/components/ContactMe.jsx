@@ -78,7 +78,9 @@ function ContactMe({ backgroundImage, contact }) {
         {/* Contact Form */}
         <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row">
           <div className="md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-3xl font-bold mb-6 text-white">Get in Touch</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white">
+              Want to get in touch? Let's chat!
+            </h2>
             <form
               ref={form}
               onSubmit={handleSubmit}
@@ -140,7 +142,7 @@ function ContactMe({ backgroundImage, contact }) {
               <input type="hidden" name="to_name" value="Your Name" />
               <button
                 type="submit"
-                className="bg-sky-blue-400 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors"
+                className="bg-sky-400 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors"
               >
                 Send Message
               </button>

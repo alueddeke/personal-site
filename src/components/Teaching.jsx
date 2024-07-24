@@ -2,7 +2,7 @@ function Teaching({ bio, pictures }) {
   const teachingProfile =
     pictures && pictures.length >= 10 ? pictures[10] : null;
 
-  const bioText = bio?.content?.[0]?.content?.[0]?.value || "Bio not available";
+  const bioText = bio || "Bio not available";
 
   return (
     <section className="bg-light-gray md:py-24 lg:py-24">

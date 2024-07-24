@@ -29,6 +29,16 @@ export const getContentfulData = async () => {
     const resolveAsset = (assetLink) =>
       assets.find((asset) => asset.sys.id === assetLink.sys.id);
 
+    if (item.fields.audioClips) {
+      item.fields.audioClips = item.fields.audioClips.map((clipLink) => {
+        const clip = entries.find((entry) => entry.sys.id === clipLink.sys.id);
+        if (clip && clip.fields.audioFile) {
+          clip.fields.audioFile = resolveAsset(clip.fields.audioFile);
+        }
+        return clip;
+      });
+    }
+
     // Resolve picture links to actual asset data
     if (item.fields.pictures) {
       item.fields.pictures = item.fields.pictures.map(resolveAsset);
@@ -54,8 +64,6 @@ export const getContentfulData = async () => {
         return project;
       });
     }
-
-    console.log("Processed Contentful data:", JSON.stringify(item, null, 2));
 
     return item;
   } catch (error) {
