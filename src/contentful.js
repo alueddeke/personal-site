@@ -39,6 +39,16 @@ export const getContentfulData = async () => {
       });
     }
 
+    if (item.fields.experiences) {
+      item.fields.experiences = item.fields.experiences.map(
+        (experienceLink) => {
+          return entries.find(
+            (entry) => entry.sys.id === experienceLink.sys.id
+          );
+        }
+      );
+    }
+
     // Resolve picture links to actual asset data
     if (item.fields.pictures) {
       item.fields.pictures = item.fields.pictures.map(resolveAsset);

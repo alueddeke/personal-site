@@ -1,5 +1,5 @@
-// src/components/ProjectCard.jsx
 import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 function ProjectCard({ project }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -10,6 +10,19 @@ function ProjectCard({ project }) {
   };
 
   const hasUrl = Boolean(project.fields.projectUrl);
+
+  // Custom renderer for links in the description
+  const customRenderer = {
+    a: ({ node, ...props }) => (
+      <a
+        {...props}
+        className="text-sky-500 hover:text-sky-700"
+        onClick={(e) => e.stopPropagation()}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    ),
+  };
 
   const cardContent = (
     <>
@@ -31,12 +44,14 @@ function ProjectCard({ project }) {
       </div>
       <div className="p-4">
         <h3 className="text-xl font-semibold mb-2">{project.fields.title}</h3>
-        <p
+        <div
           className={`text-gray-600 mb-4 ${isExpanded ? "" : "line-clamp-3"}`}
           onClick={toggleDescription}
         >
-          {project.fields.description}
-        </p>
+          <ReactMarkdown components={customRenderer}>
+            {project.fields.description}
+          </ReactMarkdown>
+        </div>
         {!isExpanded && (
           <button
             onClick={toggleDescription}

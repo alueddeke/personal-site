@@ -10,6 +10,7 @@ import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Experiences from "./components/Experiences";
 
 function App() {
   const [data, setData] = useState(null);
@@ -51,6 +52,9 @@ function App() {
             bio={data.fields.bio.content}
             pictures={data.fields.pictures}
           />
+        </div>
+        <div id="experiences">
+          <Experiences experiences={data.fields.experiences} />
         </div>
         <div id="music">
           <Music

@@ -88,6 +88,13 @@ const NavBar = ({ avatar, skills }) => {
                 />
               </div>
               <button
+                onClick={() => scrollToSection("experiences")}
+                className={linkClass}
+              >
+                Experiences
+              </button>
+
+              <button
                 onClick={() => scrollToSection("music")}
                 className={linkClass}
               >
