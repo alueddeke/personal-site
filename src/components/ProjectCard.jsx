@@ -16,11 +16,13 @@ function ProjectCard({ project }) {
     a: ({ node, ...props }) => (
       <a
         {...props}
-        className="text-sky-500 hover:text-sky-700"
+        className="text-sky-400 hover:text-sky-600 transition-colors duration-300"
         onClick={(e) => e.stopPropagation()}
         target="_blank"
         rel="noopener noreferrer"
-      />
+      >
+        here
+      </a>
     ),
   };
 
