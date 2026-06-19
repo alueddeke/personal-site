@@ -68,7 +68,7 @@ const NavBar = ({ avatar, skills }) => {
             </div>
           </div>
           <button
-            className="block md:hidden ml-auto p-2"
+            className={`block md:hidden ml-auto p-2 ${isScrolled ? "text-dark-text" : "text-off-white"}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
