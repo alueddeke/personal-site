@@ -4,6 +4,7 @@ import SkillsDropdown from "./SkillsDropdown";
 const NavBar = ({ avatar, skills }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSkills, setShowSkills] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const timeoutRef = useRef(null);
 
   useEffect(() => {
@@ -66,6 +67,13 @@ const NavBar = ({ avatar, skills }) => {
               />
             </div>
           </div>
+          <button
+            className="block md:hidden ml-auto p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? "✕" : "☰"}
+          </button>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <button
@@ -116,6 +124,27 @@ const NavBar = ({ avatar, skills }) => {
           </div>
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="block md:hidden bg-white border-t border-gray-200">
+          <div className="flex flex-col px-4 py-2 space-y-1">
+            <button onClick={() => { scrollToSection("about"); setIsMenuOpen(false); }} className={linkClass}>
+              About Me
+            </button>
+            <button onClick={() => { scrollToSection("experiences"); setIsMenuOpen(false); }} className={linkClass}>
+              Experiences
+            </button>
+            <button onClick={() => { scrollToSection("music"); setIsMenuOpen(false); }} className={linkClass}>
+              Music
+            </button>
+            <button onClick={() => { scrollToSection("projects"); setIsMenuOpen(false); }} className={linkClass}>
+              Projects
+            </button>
+            <button onClick={() => { scrollToSection("contact"); setIsMenuOpen(false); }} className={linkClass}>
+              Contact Me
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
