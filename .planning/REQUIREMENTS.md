@@ -85,6 +85,7 @@
 | BUG-06 | Phase 1 | Pending |
 | BUG-07 | Phase 1 | Pending |
 | BUG-08 | Phase 1 | Pending |
+| PERF-03 | Phase 1 | Pending |
 | CONT-01 | Phase 2 | Pending |
 | CONT-02 | Phase 2 | Pending |
 | CONT-03 | Phase 2 | Pending |
@@ -93,16 +94,15 @@
 | CONT-06 | Phase 2 | Pending |
 | CONT-07 | Phase 2 | Pending |
 | CONT-08 | Phase 2 | Pending |
-| DSGN-01 | Phase 3 | Pending |
-| DSGN-02 | Phase 3 | Pending |
-| DSGN-03 | Phase 4 | Pending |
-| DSGN-04 | Phase 3 | Pending |
 | DSGN-05 | Phase 2 | Pending |
 | MUSC-01 | Phase 2 | Pending |
 | MUSC-02 | Phase 2 | Pending |
+| DSGN-01 | Phase 3 | Pending |
+| DSGN-02 | Phase 3 | Pending |
+| DSGN-04 | Phase 3 | Pending |
+| DSGN-03 | Phase 4 | Pending |
 | PERF-01 | Phase 5 | Pending |
 | PERF-02 | Phase 5 | Pending |
-| PERF-03 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 23 total
@@ -111,4 +111,4 @@
 
 ---
 *Requirements defined: 2026-06-19*
-*Last updated: 2026-06-19 after initial definition*
+*Last updated: 2026-06-19 — traceability updated after roadmap creation*
