@@ -31,7 +31,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The Gist AI project card's "live link" opens a working deployed application on Netlify
   4. The ContactMe section shows both the form (left column) and contact information (right column) fully rendered
   5. The browser dev tools console shows zero log output when browsing the production site
-**Plans**: TBD
+**Plans**: 2 plans
+- [ ] 01-01-PLAN.md — Mobile nav, ContactMe two-column fix, OG/SEO tags, footer year, console.log + hidden-input hygiene
+- [ ] 01-02-PLAN.md — Deploy Gist AI Next.js app to a new Netlify site and update the Contentful project card URL
 **UI hint**: yes
 
 ### Phase 2: Content Overhaul
@@ -88,7 +90,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation Fixes | 0/? | Not started | - |
+| 1. Foundation Fixes | 0/2 | Not started | - |
 | 2. Content Overhaul | 0/? | Not started | - |
 | 3. Dark Cinematic Design | 0/? | Not started | - |
 | 4. Scroll Animations | 0/? | Not started | - |
