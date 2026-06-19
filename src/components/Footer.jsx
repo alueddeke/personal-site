@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex items-center justify-center h-16">
           <p className="text-sm font-medium text-gray-600">
             This project was created using <strong>REACT, TAILWINDCSS </strong>
-            and <strong>CONTENTFUL</strong>. 2024
+            and <strong>CONTENTFUL</strong>. {new Date().getFullYear()}
           </p>
         </div>
       </div>

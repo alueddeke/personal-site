@@ -21,7 +21,6 @@ function App() {
     const fetchData = async () => {
       try {
         const result = await getContentfulData();
-        console.log(result);
         setData(result);
       } catch (err) {
         setError("Failed to fetch data from Contentful");
