@@ -27,7 +27,6 @@ function ContactMe({ backgroundImage, contact }) {
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
       (result) => {
-        console.log("Email successfully sent!", result.text);
         setName("");
         setEmail("");
         setMessage("");
@@ -37,7 +36,6 @@ function ContactMe({ backgroundImage, contact }) {
         });
       },
       (error) => {
-        console.log("Failed to send email:", error.text);
         setNotification({
           message: "Failed to send email. Please try again.",
           type: "error",
@@ -75,9 +73,7 @@ function ContactMe({ backgroundImage, contact }) {
       )}
       <div className="absolute inset-0 bg-dark-text bg-opacity-40"></div>
       <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row">
-        {/* Contact Form */}
-        <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row">
-          <div className="md:w-1/2 mb-8 md:mb-0">
+        <div className="md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-3xl font-bold mb-6 text-white">
               Want to get in touch? Let's chat!
             </h2>
@@ -139,7 +135,7 @@ function ContactMe({ backgroundImage, contact }) {
                   required
                 ></textarea>
               </div>
-              <input type="hidden" name="to_name" value="Your Name" />
+              <input type="hidden" name="to_name" value="Antoni Lueddeke" />
               <button
                 type="submit"
                 className="bg-sky-400 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors"
@@ -148,7 +144,32 @@ function ContactMe({ backgroundImage, contact }) {
               </button>
             </form>
           </div>
-        </div>
+          <div className="md:w-1/2 md:pl-8">
+            <h2 className="text-3xl font-bold mb-6 text-white">Get in touch</h2>
+            <div className="text-white space-y-4">
+              <p>antonilueddeke@gmail.com</p>
+              <p>
+                <a
+                  href="https://linkedin.com/in/antonilueddeke"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  LinkedIn
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://github.com/alueddeke"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  GitHub
+                </a>
+              </p>
+            </div>
+          </div>
       </div>
       {notification && (
         <Notification
