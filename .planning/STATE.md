@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Phase 1 context gathered
-last_updated: "2026-06-19T17:17:30.296Z"
-last_activity: 2026-06-19 -- Phase 01 planning complete
+status: SongScope deployed (demo mode) + carded beside Gist AI; ready for Phase 2
+stopped_at: Phase 2 context gathered
+last_updated: "2026-06-20T16:42:55.443Z"
+last_activity: 2026-06-20 -- Plan 03 complete; SongScope live + card published
 progress:
   total_phases: 5
-  completed_phases: 0
-  total_plans: 2
-  completed_plans: 0
-  percent: 0
+  completed_phases: 1
+  total_plans: 3
+  completed_plans: 3
+  percent: 20
 ---
 
 # Project State
@@ -21,16 +21,31 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-19)
 
 **Core value:** A recruiter who clicks the link should immediately understand Antoni ships real production software — and want to reach out within minutes.
-**Current focus:** Phase 1 — Foundation Fixes
+**Current focus:** Phase 1 — foundation-fixes
 
 ## Current Position
 
-Phase: 1 of 5 (Foundation Fixes)
-Plan: 0 of ? in current phase
-Status: Ready to execute
-Last activity: 2026-06-19 -- Phase 01 planning complete
+Phase: 1 (foundation-fixes) — COMPLETE (3 plans)
+Plan: 3 of 3 done
+Status: SongScope deployed (demo mode) + carded beside Gist AI; ready for Phase 2
+Last activity: 2026-06-20 -- Plan 03 complete; SongScope live + card published
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██░░░░░░░░] 20%
+
+## Live deployments (both projects)
+
+- Gist AI: https://gistai-app.netlify.app (Netlify, Next.js)
+- SongScope: https://songscope-demo.netlify.app (Netlify) + https://songscope.onrender.com (Render+Postgres), DEMO_MODE single-account no-login
+- Contentful projects: [Gist AI, SongScope]; Wild Oasis + My Frontend Lib deleted
+
+## SongScope Deploy (Plan 03) — key context for future chats
+
+- Approach: DEMO MODE (Plan A) — single seeded Spotify account, NO per-user login. Chosen over Spotify Extended Quota (slow approval) and allowlist (broken for recruiters).
+- Demo Mode also sidesteps the cross-domain session-cookie problem (HANDOFF_DEPLOY.md §3 #1 break point).
+- Hosting: backend → Render (web service + managed Postgres); frontend → Netlify (@netlify/plugin-nextjs).
+- REQUIRED: visible UI banner — demo connected to one Spotify account / one person's listening history; production tailors per-user. (User-mandated copy.)
+- Source-of-truth doc: personal-website/HANDOFF_DEPLOY.md. Repo: ~/Desktop/Projects/songscope (two-tier).
+- Full task breakdown + checkpoints: .planning/phases/01-foundation-fixes/01-03-PLAN.md
 
 ## Performance Metrics
 
@@ -85,6 +100,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-06-19T16:48:34.537Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-foundation-fixes/01-CONTEXT.md
+Last session: 2026-06-20T16:42:55.436Z
+Stopped at: Phase 2 context gathered
+Resume file: .planning/phases/02-content-overhaul/02-CONTEXT.md
