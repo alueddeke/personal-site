@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. The ContactMe section shows both the form (left column) and contact information (right column) fully rendered
   5. The browser dev tools console shows zero log output when browsing the production site
 **Plans**: 2 plans
-- [ ] 01-01-PLAN.md — Mobile nav, ContactMe two-column fix, OG/SEO tags, footer year, console.log + hidden-input hygiene
+- [x] 01-01-PLAN.md — Mobile nav, ContactMe two-column fix, OG/SEO tags, footer year, console.log + hidden-input hygiene
 - [ ] 01-02-PLAN.md — Deploy Gist AI Next.js app to a new Netlify site and update the Contentful project card URL
 **UI hint**: yes
 
@@ -47,7 +47,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The Projects section shows only Music School SaaS, SongScope, and Gist AI — Wild Oasis and My Frontend Lib are completely absent from Contentful and the rendered site
   4. The Skills section includes AWS Cloud Practitioner, React Native / Expo, AI/ML stack, and Docker/CI/CD tooling
   5. The Music section shows "Why We're Living" EP with a working Spotify link and no Teaching section appears anywhere in the page layout
-**Plans**: TBD
+**Plans**: 5 plans
+- [ ] 02-01-PLAN.md — Inventory + CDN verify harness + draft ALL copy + heroTagline field activation + approval gate
+- [ ] 02-02-PLAN.md — Experiences: Freelance + Risktec + Piano Teacher entries (CMA)
+- [ ] 02-03-PLAN.md — Projects: Music School SaaS lead + Gist AI + SongScope updates; remove Wild Oasis + My Frontend Lib (unlink-before-delete); thumbnail uploads
+- [ ] 02-04-PLAN.md — Hero tagline value + skills + music EP (single read-modify-write) + EP artwork upload
+- [ ] 02-05-PLAN.md — JSX render: ReactMarkdown in Experiences, heroTagline prop, remove Teaching; build + verify all 5 success criteria
 
 ### Phase 3: Dark Cinematic Design
 **Goal**: The site presents a dark cinematic aesthetic — zinc-950 base palette, reordered sections (Hero → Projects → About → Experiences → Music → Contact), and all components restyled with the new token system
@@ -90,8 +95,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation Fixes | 0/2 | Not started | - |
-| 2. Content Overhaul | 0/? | Not started | - |
+| 1. Foundation Fixes | 1/2 | In Progress|  |
+| 2. Content Overhaul | 0/5 | In Progress | - |
 | 3. Dark Cinematic Design | 0/? | Not started | - |
 | 4. Scroll Animations | 0/? | Not started | - |
 | 5. Performance & Code Quality | 0/? | Not started | - |
