@@ -42,8 +42,8 @@
 
 ### Performance & Code Quality
 
-- [ ] **PERF-01**: Contentful Image API optimization — append `?w=800&fm=webp` or equivalent to all image URLs (stop serving full-resolution images)
-- [ ] **PERF-02**: Named Contentful asset lookup — replace magic array indices (`pictures[9]`, `backgrounds[10]`, etc.) with named field or slug-based lookup
+- [x] **PERF-01**: Contentful Image API optimization — append `?w=800&fm=webp` or equivalent to all image URLs (stop serving full-resolution images)
+- [x] **PERF-02**: Named Contentful asset lookup — replace magic array indices (`pictures[9]`, `backgrounds[10]`, etc.) with named field or slug-based lookup
 - [ ] **PERF-03**: SEO meta tags — `<title>`, `<meta name="description">` in index.html
 
 ## v2 Requirements
@@ -101,8 +101,8 @@
 | DSGN-02 | Phase 3 | Complete |
 | DSGN-04 | Phase 3 | Complete |
 | DSGN-03 | Phase 4 | Complete |
-| PERF-01 | Phase 5 | Pending |
-| PERF-02 | Phase 5 | Pending |
+| PERF-01 | Phase 5 | Complete |
+| PERF-02 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 23 total
