@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation Fixes** - Fix every broken or professionally embarrassing thing before design work ships (completed)
 - [x] **Phase 2: Content Overhaul** - Replace all stale content with current career evidence in Contentful CMS (completed 2026-06-21)
-- [ ] **Phase 3: Dark Cinematic Design** - New Tailwind tokens, section reorder, component restyling
+- [x] **Phase 3: Dark Cinematic Design** - New Tailwind tokens, section reorder, component restyling (completed 2026-06-21)
 - [ ] **Phase 4: Scroll Animations** - framer-motion whileInView reveals, hero CSS entrance, reduced-motion support
 - [ ] **Phase 5: Performance & Code Quality** - Contentful Image API, named asset lookup, Lighthouse polish
 
@@ -98,6 +98,6 @@ Decimal phases appear between their surrounding integers in numeric order.
 |-------|----------------|--------|-----------|
 | 1. Foundation Fixes | 1/2 | In Progress|  |
 | 2. Content Overhaul | 5/5 | Complete   | 2026-06-21 |
-| 3. Dark Cinematic Design | 0/? | Not started | - |
+| 3. Dark Cinematic Design | 1/1 | Complete   | 2026-06-21 |
 | 4. Scroll Animations | 0/? | Not started | - |
 | 5. Performance & Code Quality | 0/? | Not started | - |

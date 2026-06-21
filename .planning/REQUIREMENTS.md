@@ -29,10 +29,10 @@
 
 ### Design
 
-- [ ] **DSGN-01**: Dark cinematic color theme — zinc-950 base, replace current mint/teal Tailwind tokens, all components restyled to dark palette
-- [ ] **DSGN-02**: Section reorder — Hero → Projects → About → Experiences → Music → Contact (Projects currently buried)
+- [x] **DSGN-01**: Dark cinematic color theme — zinc-950 base, replace current mint/teal Tailwind tokens, all components restyled to dark palette
+- [x] **DSGN-02**: Section reorder — Hero → Projects → About → Experiences → Music → Contact (Projects currently buried)
 - [ ] **DSGN-03**: Scroll-triggered entrance animations — framer-motion `whileInView` for section reveals, CSS keyframes for hero mount, `MotionConfig reducedMotion="user"` for accessibility
-- [ ] **DSGN-04**: ProjectCard content hierarchy — name → one-line impact statement → stack tags → image (currently image-first)
+- [x] **DSGN-04**: ProjectCard content hierarchy — name → one-line impact statement → stack tags → image (currently image-first)
 - [x] **DSGN-05**: Teaching section retired as standalone section — Piano Teacher entry folds into Experiences list, Teaching.jsx removed from layout
 
 ### Music
@@ -97,9 +97,9 @@
 | DSGN-05 | Phase 2 | Complete |
 | MUSC-01 | Phase 2 | Complete |
 | MUSC-02 | Phase 2 | Complete |
-| DSGN-01 | Phase 3 | Pending |
-| DSGN-02 | Phase 3 | Pending |
-| DSGN-04 | Phase 3 | Pending |
+| DSGN-01 | Phase 3 | Complete |
+| DSGN-02 | Phase 3 | Complete |
+| DSGN-04 | Phase 3 | Complete |
 | DSGN-03 | Phase 4 | Pending |
 | PERF-01 | Phase 5 | Pending |
 | PERF-02 | Phase 5 | Pending |
