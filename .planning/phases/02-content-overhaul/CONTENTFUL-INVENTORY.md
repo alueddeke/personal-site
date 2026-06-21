@@ -49,6 +49,18 @@
 
 ---
 
+## Plan 02-02 writes (experiences) — DONE
+
+| Entry | id | action | published version |
+|-------|-----|--------|-------------------|
+| Freelance Software Engineer | `0ZrRS2gcRVz3cWLkungv7` | created | v2 |
+| Risktec Software Engineer | `5rWJCOyAw2bZoRzf6oLVak` | **updated in place** (was Front-End Developer; decision A) | v34 |
+| Piano Teacher | `1jqO1ej5HvaYy9mEDbEnSq` | created | v2 |
+
+`personalWebsite` re-published **v113** with experiences (newest-first): Freelance → Team Lead/SongScope → Risktec → Shopify Hackathon → Piano Teacher. No notResolvable errors.
+
+---
+
 ## Fields relevant to downstream plans
 
 - **skills (current value):** `['React', 'NextJS', 'Typescript', 'Redux', 'CSS', 'SCSS', 'Tailwind CSS', 'Python', 'Django', 'MySQL', 'Data Structures', 'KnexJS', 'REST API', 'GraphQL', 'Agile Development', 'Content Management Systems']` — 02-04 merges in the D-11 additions.
