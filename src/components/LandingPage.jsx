@@ -1,18 +1,18 @@
 import React from "react";
+import { findAsset, optimizedUrl } from "../utils/image";
 
 function LandingPage({ name, profileImage, backgrounds, heroTagline }) {
-  // Get the second background image if available
-  const backgroundImage =
-    backgrounds && backgrounds.length > 1 ? backgrounds[1] : null;
+  const backgroundImage = findAsset(backgrounds, "code-screen");
+  const backgroundUrl = optimizedUrl(backgroundImage, { w: 1920, q: 60 });
 
   return (
     <section className="h-screen flex flex-col justify-center items-center relative overflow-hidden">
       {/* Background image with blur */}
-      {backgroundImage && (
+      {backgroundUrl && (
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${backgroundImage.fields.file.url})`,
+            backgroundImage: `url(${backgroundUrl})`,
             filter: "blur(8px)", // Adjust the blur amount as needed
             transform: "scale(1.1)", // Slightly scale up to prevent blur edges
           }}
@@ -33,8 +33,9 @@ function LandingPage({ name, profileImage, backgrounds, heroTagline }) {
         </p>
         {profileImage && (
           <img
-            src={profileImage.fields.file.url}
+            src={optimizedUrl(profileImage, { w: 512 })}
             alt={profileImage.fields.title}
+            loading="lazy"
             className="hero-anim hero-anim-3 w-64 h-64 rounded-full object-cover border-4 border-zinc-700 shadow-lg mx-auto"
           />
         )}

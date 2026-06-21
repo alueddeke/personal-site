@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import SkillsDropdown from "./SkillsDropdown";
+import { optimizedUrl } from "../utils/image";
 
 const NavBar = ({ avatar, skills }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,7 +62,7 @@ const NavBar = ({ avatar, skills }) => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <img
-                src={avatar.fields.file.url}
+                src={optimizedUrl(avatar, { w: 96 })}
                 alt="Avatar"
                 className="h-10 w-10 rounded-full cursor-pointer"
                 onClick={scrollToTop}

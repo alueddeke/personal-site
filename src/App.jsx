@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Experiences from "./components/Experiences";
 import Reveal from "./components/Reveal";
+import { findAsset } from "./utils/image";
 
 function App() {
   const [data, setData] = useState(null);
@@ -51,7 +52,7 @@ function App() {
           <div id="projects">
             <Projects
               projects={data.fields.projects}
-              backgroundImage={data.fields.backgrounds?.[0]}
+              backgroundImage={findAsset(data.fields.backgrounds, "closed-laptop")}
             />
           </div>
         </Reveal>
@@ -73,7 +74,7 @@ function App() {
             <Music
               bio={data.fields.musicBio}
               pictures={data.fields.pictures}
-              backgroundImage={data.fields.backgrounds?.[10]}
+              backgroundImage={findAsset(data.fields.backgrounds, "vinyl")}
               audioClips={data.fields.audioClips}
               epArtwork={data.fields.epArtwork}
             />
@@ -82,7 +83,7 @@ function App() {
         <Reveal>
           <div id="contact">
             <ContactMe
-              backgroundImage={data.fields.backgrounds?.[2]}
+              backgroundImage={findAsset(data.fields.backgrounds, "f-hole-guitar")}
               contact={data.fields.contact}
             />
           </div>

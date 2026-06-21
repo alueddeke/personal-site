@@ -1,6 +1,7 @@
+import { findAsset, optimizedUrl } from "../utils/image";
+
 function Teaching({ bio, pictures }) {
-  const teachingProfile =
-    pictures && pictures.length >= 10 ? pictures[10] : null;
+  const teachingProfile = findAsset(pictures, "teaching");
 
   const bioText = bio || "Bio not available";
 
@@ -12,8 +13,9 @@ function Teaching({ bio, pictures }) {
             <div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
               <div className="w-64 h-80 overflow-hidden rounded-lg shadow-lg">
                 <img
-                  src={teachingProfile.fields.file.url}
+                  src={optimizedUrl(teachingProfile, { w: 640 })}
                   alt={teachingProfile.fields.title || "Portrait"}
+                  loading="lazy"
                   className="w-full h-full object-cover object-center"
                 />
               </div>

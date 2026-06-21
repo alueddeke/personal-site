@@ -1,9 +1,8 @@
 import React from "react";
+import { findAsset, optimizedUrl } from "../utils/image";
 
 function AboutMe({ bio, pictures }) {
-  // Ensure we have at least 10 pictures before trying to access the 10th one
-  const portraitPicture =
-    pictures && pictures.length >= 10 ? pictures[9] : null;
+  const portraitPicture = findAsset(pictures, "portrait");
 
   return (
     <section className="bg-zinc-950 text-white py-20 md:py-24 lg:py-32 relative overflow-hidden p-4 sm:p-8 border-t border-zinc-900">
@@ -28,8 +27,9 @@ function AboutMe({ bio, pictures }) {
           <div className="md:w-1/3 flex justify-center">
             <div className="w-64 h-80 overflow-hidden rounded-lg shadow-lg">
               <img
-                src={portraitPicture.fields.file.url}
+                src={optimizedUrl(portraitPicture, { w: 640 })}
                 alt={portraitPicture.fields.title || "Portrait"}
+                loading="lazy"
                 className="w-full h-full object-cover object-center transform transition duration-500 hover:scale-105"
               />
             </div>

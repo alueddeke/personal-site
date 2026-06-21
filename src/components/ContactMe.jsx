@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Notification from "./Notification";
+import { optimizedUrl } from "../utils/image";
 
 function ContactMe({ backgroundImage, contact }) {
   const [name, setName] = useState("");
@@ -54,9 +55,10 @@ function ContactMe({ backgroundImage, contact }) {
     return re.test(String(email).toLowerCase());
   };
 
-  const backgroundStyle = backgroundImage
+  const backgroundUrl = optimizedUrl(backgroundImage, { w: 1920, q: 60 });
+  const backgroundStyle = backgroundUrl
     ? {
-        backgroundImage: `url(${backgroundImage.fields.file.url})`,
+        backgroundImage: `url(${backgroundUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

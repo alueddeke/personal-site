@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
+import { optimizedUrl } from "../utils/image";
 
 function ProjectCard({ project }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -60,8 +61,9 @@ function ProjectCard({ project }) {
       <div className="relative h-56 bg-zinc-800">
         {project.fields.thumbnail && project.fields.thumbnail.fields && (
           <img
-            src={project.fields.thumbnail.fields.file.url}
+            src={optimizedUrl(project.fields.thumbnail, { w: 800 })}
             alt={project.fields.title || "Project thumbnail"}
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         )}

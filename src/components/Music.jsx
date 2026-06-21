@@ -1,10 +1,13 @@
 import React from "react";
 import HowlerPlayer from "./HowlerPlayer";
+import { optimizedUrl, performancePhotos } from "../utils/image";
 
 function Music({ bio, pictures, backgroundImage, audioClips, epArtwork }) {
-  const backgroundStyle = backgroundImage
-    ? { backgroundImage: `url(${backgroundImage.fields.file.url})` }
+  const backgroundUrl = optimizedUrl(backgroundImage, { w: 1920, q: 60 });
+  const backgroundStyle = backgroundUrl
+    ? { backgroundImage: `url(${backgroundUrl})` }
     : {};
+  const photos = performancePhotos(pictures).slice(0, 9);
 
   return (
     <section
@@ -19,8 +22,9 @@ function Music({ bio, pictures, backgroundImage, audioClips, epArtwork }) {
         <h2 className="text-4xl font-bold mb-8 text-white">Music</h2>
         {epArtwork?.fields?.file?.url && (
           <img
-            src={epArtwork.fields.file.url}
+            src={optimizedUrl(epArtwork, { w: 640 })}
             alt="Why We're Living EP artwork"
+            loading="lazy"
             className="w-full max-w-xs rounded-lg shadow-lg mb-8"
           />
         )}
@@ -39,21 +43,21 @@ function Music({ bio, pictures, backgroundImage, audioClips, epArtwork }) {
             ))}
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-          {pictures &&
-            pictures.slice(0, 9).map((picture, index) => (
-              <div
-                key={index}
-                className="aspect-square overflow-hidden rounded-lg shadow-lg bg-zinc-800"
-              >
-                {picture && picture.fields && picture.fields.file && (
-                  <img
-                    src={picture.fields.file.url}
-                    alt={picture.fields.title || `Picture ${index + 1}`}
-                    className="w-full h-full object-cover object-center transform transition duration-500 hover:scale-105"
-                  />
-                )}
-              </div>
-            ))}
+          {photos.map((picture, index) => (
+            <div
+              key={index}
+              className="aspect-square overflow-hidden rounded-lg shadow-lg bg-zinc-800"
+            >
+              {picture && picture.fields && picture.fields.file && (
+                <img
+                  src={optimizedUrl(picture, { w: 600 })}
+                  alt={picture.fields.title || `Picture ${index + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover object-center transform transition duration-500 hover:scale-105"
+                />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

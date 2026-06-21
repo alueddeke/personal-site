@@ -1,15 +1,17 @@
 // src/components/Projects.jsx
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { optimizedUrl } from "../utils/image";
 
 function Projects({ projects, backgroundImage }) {
   if (!projects || projects.length === 0) {
     return <div>No projects available.</div>;
   }
 
-  const backgroundStyle = backgroundImage
+  const backgroundUrl = optimizedUrl(backgroundImage, { w: 1920, q: 60 });
+  const backgroundStyle = backgroundUrl
     ? {
-        backgroundImage: `url(${backgroundImage.fields.file.url})`,
+        backgroundImage: `url(${backgroundUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
