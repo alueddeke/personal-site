@@ -71,7 +71,7 @@ function ContactMe({ backgroundImage, contact }) {
           style={backgroundStyle}
         ></div>
       )}
-      <div className="absolute inset-0 bg-dark-text bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-zinc-950/80"></div>
       <div className="relative z-10 container mx-auto px-4 flex flex-col md:flex-row">
         <div className="md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-3xl font-bold mb-6 text-white">
@@ -80,12 +80,12 @@ function ContactMe({ backgroundImage, contact }) {
             <form
               ref={form}
               onSubmit={handleSubmit}
-              className="bg-white p-6 rounded-lg shadow-md"
+              className="bg-zinc-900 border border-zinc-800 p-6 rounded-lg shadow-lg"
             >
               <div className="mb-4">
                 <label
                   htmlFor="from_name"
-                  className="block text-gray-700 font-bold mb-2"
+                  className="block text-zinc-300 font-bold mb-2"
                 >
                   Name
                 </label>
@@ -95,14 +95,14 @@ function ContactMe({ backgroundImage, contact }) {
                   id="from_name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 bg-zinc-800 border border-zinc-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label
                   htmlFor="reply_to"
-                  className="block text-gray-700 font-bold mb-2"
+                  className="block text-zinc-300 font-bold mb-2"
                 >
                   Email
                 </label>
@@ -115,14 +115,14 @@ function ContactMe({ backgroundImage, contact }) {
                     setEmail(e.target.value);
                     setIsEmailValid(validateEmail(e.target.value));
                   }}
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 bg-zinc-800 border border-zinc-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                   required
                 />
               </div>
               <div className="mb-4">
                 <label
                   htmlFor="message"
-                  className="block text-gray-700 font-bold mb-2"
+                  className="block text-zinc-300 font-bold mb-2"
                 >
                   Message
                 </label>
@@ -131,14 +131,14 @@ function ContactMe({ backgroundImage, contact }) {
                   id="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"
+                  className="w-full px-3 py-2 bg-zinc-800 border border-zinc-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white h-32"
                   required
                 ></textarea>
               </div>
               <input type="hidden" name="to_name" value="Antoni Lueddeke" />
               <button
                 type="submit"
-                className="bg-sky-400 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition-colors"
+                className="bg-white text-zinc-950 font-semibold px-4 py-2 rounded-lg hover:bg-zinc-200 transition-colors"
               >
                 Send Message
               </button>

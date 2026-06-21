@@ -20,14 +20,14 @@ function LandingPage({ name, profileImage, backgrounds, heroTagline }) {
       )}
 
       {/* Semi-transparent overlay */}
-      <div className="absolute inset-0 bg-dark-text/65"></div>
+      <div className="absolute inset-0 bg-zinc-950/70"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center p-8">
-        <h1 className="text-6xl font-bold mb-4 text-off-white">
+        <h1 className="text-6xl font-bold mb-4 text-white">
           Hi, I'm {name}
         </h1>
-        <p className="text-xl mb-8 text-center text-off-white">
+        <p className="text-xl mb-8 text-center text-zinc-300">
           {heroTagline ||
             "Full-stack engineer who ships production software."}
         </p>
@@ -35,7 +35,7 @@ function LandingPage({ name, profileImage, backgrounds, heroTagline }) {
           <img
             src={profileImage.fields.file.url}
             alt={profileImage.fields.title}
-            className="w-64 h-64 rounded-full object-cover border-4 border-deep-teal shadow-lg mx-auto"
+            className="w-64 h-64 rounded-full object-cover border-4 border-zinc-700 shadow-lg mx-auto"
           />
         )}
       </div>

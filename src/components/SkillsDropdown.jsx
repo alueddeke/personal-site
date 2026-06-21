@@ -5,7 +5,7 @@ const SkillsDropdown = ({ skills, isVisible, onMouseEnter, onMouseLeave }) => {
 
   return (
     <div
-      className="absolute left-0 mt-2 bg-white rounded-md shadow-lg py-1 z-50 max-h-[80vh] overflow-y-auto w-screen max-w-[90vw] sm:max-w-[95vw] md:max-w-[70vw] lg:max-w-[60vw]"
+      className="absolute left-0 mt-2 bg-zinc-900 border border-zinc-800 rounded-md shadow-lg py-1 z-50 max-h-[80vh] overflow-y-auto w-screen max-w-[90vw] sm:max-w-[95vw] md:max-w-[70vw] lg:max-w-[60vw]"
       style={{ left: "50%", transform: "translateX(-50%)" }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -14,9 +14,9 @@ const SkillsDropdown = ({ skills, isVisible, onMouseEnter, onMouseLeave }) => {
         {skills.map((skill, index) => (
           <p
             key={index}
-            className="text-dark-text whitespace-nowrap group cursor-default"
+            className="text-zinc-300 whitespace-nowrap group cursor-default"
           >
-            <span className="group-hover:text-sky-blue transition-colors duration-200">
+            <span className="group-hover:text-white transition-colors duration-200">
               {skill}
             </span>
           </p>

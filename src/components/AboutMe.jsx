@@ -6,7 +6,7 @@ function AboutMe({ bio, pictures }) {
     pictures && pictures.length >= 10 ? pictures[9] : null;
 
   return (
-    <section className="bg-off-white text-dark-text py-20 md:py-24 lg:py-32 relative overflow-hidden p-4 sm:p-8">
+    <section className="bg-zinc-950 text-white py-20 md:py-24 lg:py-32 relative overflow-hidden p-4 sm:p-8 border-t border-zinc-900">
       <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-start">
         {/* Text content */}
         <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">

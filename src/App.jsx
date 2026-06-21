@@ -37,7 +37,7 @@ function App() {
   if (!data) return <Error message="No data available" />;
 
   return (
-    <div className="bg-light-gray text-dark-text">
+    <div className="bg-zinc-950 text-white">
       <NavBar avatar={data.fields.avatar} skills={data.fields.skills} />
       <main>
         <LandingPage
@@ -46,6 +46,12 @@ function App() {
           backgrounds={data.fields.backgrounds}
           heroTagline={data.fields.heroTagline}
         />
+        <div id="projects">
+          <Projects
+            projects={data.fields.projects}
+            backgroundImage={data.fields.backgrounds?.[0]}
+          />
+        </div>
         <div id="about">
           <AboutMe
             bio={data.fields.bio.content}
@@ -62,12 +68,6 @@ function App() {
             backgroundImage={data.fields.backgrounds?.[10]}
             audioClips={data.fields.audioClips}
             epArtwork={data.fields.epArtwork}
-          />
-        </div>
-        <div id="projects">
-          <Projects
-            projects={data.fields.projects}
-            backgroundImage={data.fields.backgrounds?.[0]}
           />
         </div>
         <div id="contact">

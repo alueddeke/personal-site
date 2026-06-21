@@ -18,9 +18,9 @@ function HowlerPlayer({ src, title, startTime = 0, endTime = null }) {
   useEffect(() => {
     waveformRef.current = WaveSurfer.create({
       container: containerRef.current,
-      waveColor: fullConfig.theme.colors["light-gray"],
-      progressColor: fullConfig.theme.colors["sky-blue"]["300"],
-      cursorColor: fullConfig.theme.colors["deep-teal"],
+      waveColor: "#3f3f46",
+      progressColor: "#fafafa",
+      cursorColor: "#a1a1aa",
       barWidth: 2,
       barRadius: 3,
       cursorWidth: 1,
@@ -142,8 +142,8 @@ function HowlerPlayer({ src, title, startTime = 0, endTime = null }) {
   };
 
   return (
-    <div className="bg-light-gray bg-opacity-10 p-4 rounded-lg backdrop-filter backdrop-blur-sm">
-      <div className="text-lg text-off-white font-semibold mb-2">{title}</div>
+    <div className="bg-zinc-800/40 p-4 rounded-lg backdrop-filter backdrop-blur-sm">
+      <div className="text-lg text-zinc-100 font-semibold mb-2">{title}</div>
       <div
         ref={containerRef}
         className="cursor-pointer"
@@ -152,11 +152,11 @@ function HowlerPlayer({ src, title, startTime = 0, endTime = null }) {
       <div className="flex items-center justify-between mt-2">
         <button
           onClick={togglePlayPause}
-          className="bg-sky-400 text-white px-4 py-2 rounded hover:bg-sky-700"
+          className="bg-white text-zinc-950 font-semibold px-4 py-2 rounded hover:bg-zinc-200"
         >
           {playing ? "Pause" : "Play"}
         </button>
-        <div className="text-sm text-off-white">
+        <div className="text-sm text-zinc-300">
           {formatTime(seek)} / {formatTime(endTime || duration)}
         </div>
       </div>

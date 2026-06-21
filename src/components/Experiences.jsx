@@ -5,7 +5,7 @@ const customRenderer = {
   a: ({ node, ...props }) => (
     <a
       {...props}
-      className="text-sky-400 hover:text-sky-600 transition-colors duration-300"
+      className="text-white underline hover:text-zinc-300 transition-colors duration-300"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -15,7 +15,7 @@ const customRenderer = {
   ul: ({ node, ...props }) => (
     <ul className="list-disc list-inside mt-2 space-y-1" {...props} />
   ),
-  li: ({ node, ...props }) => <li className="text-gray-700" {...props} />,
+  li: ({ node, ...props }) => <li className="text-zinc-400" {...props} />,
 };
 
 const formatDate = (dateString) => {
@@ -41,17 +41,22 @@ const Experiences = ({ experiences }) => {
   });
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-zinc-950 border-t border-zinc-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">My Experiences</h2>
-        <div className="space-y-8">
+        <h2 className="text-3xl font-bold mb-8 text-center text-white">
+          Experience
+        </h2>
+        <div className="space-y-8 max-w-3xl mx-auto">
           {sortedExperiences.map((experience, index) => (
-            <div key={index} className="bg-light-gray p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-2">
+            <div
+              key={index}
+              className="bg-zinc-900 border border-zinc-800 p-6 rounded-lg shadow-lg"
+            >
+              <h3 className="text-xl font-semibold mb-2 text-white">
                 {experience.fields.title}
               </h3>
-              <p className="text-gray-600 mb-2">{experience.fields.company}</p>
-              <p className="text-sm text-gray-500">
+              <p className="text-zinc-400 mb-2">{experience.fields.company}</p>
+              <p className="text-sm text-zinc-500">
                 {formatDate(experience.fields.startDate)}
                 {experience.fields.endDate &&
                   ` - ${formatDate(experience.fields.endDate)}`}
@@ -60,7 +65,7 @@ const Experiences = ({ experiences }) => {
                   " - Present"}
               </p>
               {experience.fields.description && (
-                <div className="mt-4 text-gray-700">
+                <div className="mt-4 text-zinc-400">
                   <ReactMarkdown components={customRenderer}>
                     {experience.fields.description}
                   </ReactMarkdown>

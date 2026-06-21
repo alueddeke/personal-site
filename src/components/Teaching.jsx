@@ -5,7 +5,7 @@ function Teaching({ bio, pictures }) {
   const bioText = bio || "Bio not available";
 
   return (
-    <section className="bg-light-gray py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="bg-zinc-950 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
           {teachingProfile && (

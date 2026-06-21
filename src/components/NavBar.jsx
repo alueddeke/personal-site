@@ -45,14 +45,15 @@ const NavBar = ({ avatar, skills }) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const linkClass = `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 
-    ${isScrolled ? "text-dark-text" : "text-off-white"} 
-    hover:underline hover:decoration-sky-blue hover:decoration-2 hover:underline-offset-4`;
+  const linkClass = `px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-300
+    hover:underline hover:decoration-white hover:decoration-2 hover:underline-offset-4`;
 
   return (
     <nav
       className={`fixed w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-off-white" : "bg-transparent"
+        isScrolled
+          ? "bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +69,7 @@ const NavBar = ({ avatar, skills }) => {
             </div>
           </div>
           <button
-            className={`block md:hidden ml-auto p-2 ${isScrolled ? "text-dark-text" : "text-off-white"}`}
+            className="block md:hidden ml-auto p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -125,7 +126,7 @@ const NavBar = ({ avatar, skills }) => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="block md:hidden bg-white border-t border-gray-200">
+        <div className="block md:hidden bg-zinc-950/95 backdrop-blur-md border-t border-zinc-800">
           <div className="flex flex-col px-4 py-2 space-y-1">
             <button onClick={() => { scrollToSection("about"); setIsMenuOpen(false); }} className={linkClass}>
               About Me

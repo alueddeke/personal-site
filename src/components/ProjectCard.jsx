@@ -6,17 +6,20 @@ function ProjectCard({ project }) {
 
   const toggleDescription = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     setIsExpanded(!isExpanded);
   };
 
   const hasUrl = Boolean(project.fields.projectUrl);
+  const description = project.fields.description || "";
+  // One-line impact = first sentence of the description.
+  const impact = description.split(/\.\s/)[0].replace(/\.$/, "") + ".";
 
-  // Custom renderer for links in the description
   const customRenderer = {
     a: ({ node, ...props }) => (
       <a
         {...props}
-        className="text-sky-400 hover:text-sky-600 transition-colors duration-300"
+        className="text-white underline hover:text-zinc-300 transition-colors duration-300"
         onClick={(e) => e.stopPropagation()}
         target="_blank"
         rel="noopener noreferrer"
@@ -24,11 +27,37 @@ function ProjectCard({ project }) {
         here
       </a>
     ),
+    ul: ({ node, ...props }) => (
+      <ul className="list-disc list-inside mt-2 space-y-1" {...props} />
+    ),
+    li: ({ node, ...props }) => <li className="text-zinc-400" {...props} />,
   };
 
   const cardContent = (
     <>
-      <div className="relative h-64">
+      <div className="p-5">
+        {/* name */}
+        <h3 className="text-xl font-semibold mb-2 text-white">
+          {project.fields.title}
+        </h3>
+        {/* one-line impact */}
+        <p className="text-zinc-400 mb-4 leading-relaxed">{impact}</p>
+        {/* stack tags */}
+        {project.fields.technologies && (
+          <div className="mb-4 flex flex-wrap gap-2">
+            {project.fields.technologies.map((tech, index) => (
+              <span
+                key={index}
+                className="inline-block bg-zinc-800 border border-zinc-700 rounded-full px-3 py-1 text-xs font-medium text-zinc-200"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+      {/* image */}
+      <div className="relative h-56 bg-zinc-800">
         {project.fields.thumbnail && project.fields.thumbnail.fields && (
           <img
             src={project.fields.thumbnail.fields.file.url}
@@ -37,57 +66,34 @@ function ProjectCard({ project }) {
           />
         )}
         {hasUrl && (
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
             <span className="text-white text-lg font-semibold">
               View Project
             </span>
           </div>
         )}
       </div>
-      <div className="p-4">
-        <h3 className="text-xl font-semibold mb-2">{project.fields.title}</h3>
+      {/* expandable full description */}
+      <div className="p-5">
         <div
-          className={`text-gray-600 mb-4 ${isExpanded ? "" : "line-clamp-3"}`}
+          className={`text-zinc-400 ${isExpanded ? "" : "line-clamp-2"}`}
           onClick={toggleDescription}
         >
           <ReactMarkdown components={customRenderer}>
-            {project.fields.description}
+            {description}
           </ReactMarkdown>
         </div>
-        {!isExpanded && (
-          <button
-            onClick={toggleDescription}
-            className="text-sky-blue-500 hover:text-sky-blue-700 mb-4"
-          >
-            Read More
-          </button>
-        )}
-        {project.fields.technologies && (
-          <div className="mb-4">
-            {project.fields.technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
-        {project.fields.date && (
-          <p className="text-sm text-gray-500">
-            Completed:{" "}
-            {new Date(project.fields.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-            })}
-          </p>
-        )}
+        <button
+          onClick={toggleDescription}
+          className="mt-3 text-sm text-white hover:text-zinc-300 transition-colors"
+        >
+          {isExpanded ? "Show less" : "Read more"}
+        </button>
       </div>
     </>
   );
 
-  const cardClasses = `project-card bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 ${
+  const cardClasses = `project-card bg-zinc-900 border border-zinc-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.02] hover:border-zinc-600 block ${
     hasUrl ? "cursor-pointer" : ""
   }`;
 

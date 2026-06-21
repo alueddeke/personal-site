@@ -8,15 +8,15 @@ function Music({ bio, pictures, backgroundImage, audioClips, epArtwork }) {
 
   return (
     <section
-      className="py-20 bg-sky-blue bg-cover bg-center relative overflow-hidden"
+      className="py-20 bg-zinc-950 bg-cover bg-center relative overflow-hidden"
       style={backgroundStyle}
     >
       {/* Blurred overlay */}
-      <div className="absolute inset-0 backdrop-blur-md bg-dark-text/50"></div>
+      <div className="absolute inset-0 backdrop-blur-md bg-zinc-950/70"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-8 text-off-white">Music</h2>
+        <h2 className="text-4xl font-bold mb-8 text-white">Music</h2>
         {epArtwork?.fields?.file?.url && (
           <img
             src={epArtwork.fields.file.url}
@@ -24,7 +24,7 @@ function Music({ bio, pictures, backgroundImage, audioClips, epArtwork }) {
             className="w-full max-w-xs rounded-lg shadow-lg mb-8"
           />
         )}
-        <p className="text-xl leading-relaxed text-off-white mb-12">{bio}</p>
+        <p className="text-xl leading-relaxed text-zinc-200 mb-12">{bio}</p>
         <div className="flex flex-col sm:flex-row gap-8 mb-12">
           {audioClips &&
             audioClips.map((clip, index) => (
@@ -43,7 +43,7 @@ function Music({ bio, pictures, backgroundImage, audioClips, epArtwork }) {
             pictures.slice(0, 9).map((picture, index) => (
               <div
                 key={index}
-                className="aspect-square overflow-hidden rounded-lg shadow-lg bg-light-gray"
+                className="aspect-square overflow-hidden rounded-lg shadow-lg bg-zinc-800"
               >
                 {picture && picture.fields && picture.fields.file && (
                   <img
