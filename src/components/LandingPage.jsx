@@ -24,10 +24,10 @@ function LandingPage({ name, profileImage, backgrounds, heroTagline }) {
 
       {/* Content */}
       <div className="relative z-10 text-center p-8">
-        <h1 className="text-6xl font-bold mb-4 text-white">
+        <h1 className="hero-anim hero-anim-1 text-6xl font-bold mb-4 text-white">
           Hi, I'm {name}
         </h1>
-        <p className="text-xl mb-8 text-center text-zinc-300">
+        <p className="hero-anim hero-anim-2 text-xl mb-8 text-center text-zinc-300">
           {heroTagline ||
             "Full-stack engineer who ships production software."}
         </p>
@@ -35,7 +35,7 @@ function LandingPage({ name, profileImage, backgrounds, heroTagline }) {
           <img
             src={profileImage.fields.file.url}
             alt={profileImage.fields.title}
-            className="w-64 h-64 rounded-full object-cover border-4 border-zinc-700 shadow-lg mx-auto"
+            className="hero-anim hero-anim-3 w-64 h-64 rounded-full object-cover border-4 border-zinc-700 shadow-lg mx-auto"
           />
         )}
       </div>

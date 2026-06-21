@@ -10,6 +10,7 @@ import ContactMe from "./components/ContactMe";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Experiences from "./components/Experiences";
+import Reveal from "./components/Reveal";
 
 function App() {
   const [data, setData] = useState(null);
@@ -46,36 +47,46 @@ function App() {
           backgrounds={data.fields.backgrounds}
           heroTagline={data.fields.heroTagline}
         />
-        <div id="projects">
-          <Projects
-            projects={data.fields.projects}
-            backgroundImage={data.fields.backgrounds?.[0]}
-          />
-        </div>
-        <div id="about">
-          <AboutMe
-            bio={data.fields.bio.content}
-            pictures={data.fields.pictures}
-          />
-        </div>
-        <div id="experiences">
-          <Experiences experiences={data.fields.experiences} />
-        </div>
-        <div id="music">
-          <Music
-            bio={data.fields.musicBio}
-            pictures={data.fields.pictures}
-            backgroundImage={data.fields.backgrounds?.[10]}
-            audioClips={data.fields.audioClips}
-            epArtwork={data.fields.epArtwork}
-          />
-        </div>
-        <div id="contact">
-          <ContactMe
-            backgroundImage={data.fields.backgrounds?.[2]}
-            contact={data.fields.contact}
-          />
-        </div>
+        <Reveal>
+          <div id="projects">
+            <Projects
+              projects={data.fields.projects}
+              backgroundImage={data.fields.backgrounds?.[0]}
+            />
+          </div>
+        </Reveal>
+        <Reveal>
+          <div id="about">
+            <AboutMe
+              bio={data.fields.bio.content}
+              pictures={data.fields.pictures}
+            />
+          </div>
+        </Reveal>
+        <Reveal>
+          <div id="experiences">
+            <Experiences experiences={data.fields.experiences} />
+          </div>
+        </Reveal>
+        <Reveal>
+          <div id="music">
+            <Music
+              bio={data.fields.musicBio}
+              pictures={data.fields.pictures}
+              backgroundImage={data.fields.backgrounds?.[10]}
+              audioClips={data.fields.audioClips}
+              epArtwork={data.fields.epArtwork}
+            />
+          </div>
+        </Reveal>
+        <Reveal>
+          <div id="contact">
+            <ContactMe
+              backgroundImage={data.fields.backgrounds?.[2]}
+              contact={data.fields.contact}
+            />
+          </div>
+        </Reveal>
       </main>
       <Footer />
     </div>
