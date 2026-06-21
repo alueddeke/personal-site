@@ -1,7 +1,7 @@
 import React from "react";
 import HowlerPlayer from "./HowlerPlayer";
 
-function Music({ bio, pictures, backgroundImage, audioClips }) {
+function Music({ bio, pictures, backgroundImage, audioClips, epArtwork }) {
   const backgroundStyle = backgroundImage
     ? { backgroundImage: `url(${backgroundImage.fields.file.url})` }
     : {};
@@ -17,6 +17,13 @@ function Music({ bio, pictures, backgroundImage, audioClips }) {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-off-white">Music</h2>
+        {epArtwork?.fields?.file?.url && (
+          <img
+            src={epArtwork.fields.file.url}
+            alt="Why We're Living EP artwork"
+            className="w-full max-w-xs rounded-lg shadow-lg mb-8"
+          />
+        )}
         <p className="text-xl leading-relaxed text-off-white mb-12">{bio}</p>
         <div className="flex flex-col sm:flex-row gap-8 mb-12">
           {audioClips &&

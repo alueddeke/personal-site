@@ -1,6 +1,6 @@
 import React from "react";
 
-function LandingPage({ name, profileImage, backgrounds }) {
+function LandingPage({ name, profileImage, backgrounds, heroTagline }) {
   // Get the second background image if available
   const backgroundImage =
     backgrounds && backgrounds.length > 1 ? backgrounds[1] : null;
@@ -28,8 +28,8 @@ function LandingPage({ name, profileImage, backgrounds }) {
           Hi, I'm {name}
         </h1>
         <p className="text-xl mb-8 text-center text-off-white">
-          I am a full stack Web Developer passionate about creating projects
-          from end to end.
+          {heroTagline ||
+            "Full-stack engineer who ships production software."}
         </p>
         {profileImage && (
           <img

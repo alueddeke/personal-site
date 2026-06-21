@@ -5,7 +5,6 @@ import Music from "./components/Music";
 import Loading from "./components/Loading";
 import Error from "./components/Error";
 import AboutMe from "./components/AboutMe";
-import Teaching from "./components/Teaching";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 import NavBar from "./components/NavBar";
@@ -45,6 +44,7 @@ function App() {
           name={data.fields.name}
           profileImage={data.fields.profileImage}
           backgrounds={data.fields.backgrounds}
+          heroTagline={data.fields.heroTagline}
         />
         <div id="about">
           <AboutMe
@@ -61,12 +61,9 @@ function App() {
             pictures={data.fields.pictures}
             backgroundImage={data.fields.backgrounds?.[10]}
             audioClips={data.fields.audioClips}
+            epArtwork={data.fields.epArtwork}
           />
         </div>
-        <Teaching
-          pictures={data.fields.pictures}
-          bio={data.fields.teachingBio}
-        />
         <div id="projects">
           <Projects
             projects={data.fields.projects}
