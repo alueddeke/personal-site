@@ -13,7 +13,7 @@ A five-phase brownfield refresh of an existing React + Vite + Tailwind + Content
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Foundation Fixes** - Fix every broken or professionally embarrassing thing before design work ships
-- [ ] **Phase 2: Content Overhaul** - Replace all stale content with current career evidence in Contentful CMS
+- [x] **Phase 2: Content Overhaul** - Replace all stale content with current career evidence in Contentful CMS (completed 2026-06-21)
 - [ ] **Phase 3: Dark Cinematic Design** - New Tailwind tokens, section reorder, component restyling
 - [ ] **Phase 4: Scroll Animations** - framer-motion whileInView reveals, hero CSS entrance, reduced-motion support
 - [ ] **Phase 5: Performance & Code Quality** - Contentful Image API, named asset lookup, Lighthouse polish
@@ -52,7 +52,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] 02-02-PLAN.md — Experiences: Freelance + Risktec + Piano Teacher entries (CMA)
 - [x] 02-03-PLAN.md — Projects: Music School SaaS lead + Gist AI + SongScope updates; remove Wild Oasis + My Frontend Lib (unlink-before-delete); thumbnail uploads
 - [x] 02-04-PLAN.md — Hero tagline value + skills + music EP (single read-modify-write) + EP artwork upload
-- [ ] 02-05-PLAN.md — JSX render: ReactMarkdown in Experiences, heroTagline prop, remove Teaching; build + verify all 5 success criteria
+- [x] 02-05-PLAN.md — JSX render: ReactMarkdown in Experiences, heroTagline prop, remove Teaching; build + verify all 5 success criteria
 
 ### Phase 3: Dark Cinematic Design
 **Goal**: The site presents a dark cinematic aesthetic — zinc-950 base palette, reordered sections (Hero → Projects → About → Experiences → Music → Contact), and all components restyled with the new token system
@@ -96,7 +96,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation Fixes | 1/2 | In Progress|  |
-| 2. Content Overhaul | 4/5 | In Progress|  |
+| 2. Content Overhaul | 5/5 | Complete   | 2026-06-21 |
 | 3. Dark Cinematic Design | 0/? | Not started | - |
 | 4. Scroll Animations | 0/? | Not started | - |
 | 5. Performance & Code Quality | 0/? | Not started | - |
