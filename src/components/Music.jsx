@@ -51,9 +51,7 @@ function Music({ bio, pictures, backgroundImage, epArtwork }) {
               <p className="text-sm text-zinc-400 mt-1">
                 The Daily Commute · EP · 2025 · 6 tracks
               </p>
-              <p className="text-xs text-zinc-500 mt-1">
-                Golden Street Recordings
-              </p>
+              <p className="text-xs text-zinc-500 mt-1">Independently released</p>
             </div>
           </div>
 
