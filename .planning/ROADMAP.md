@@ -49,7 +49,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. The Music section shows "Why We're Living" EP with a working Spotify link and no Teaching section appears anywhere in the page layout
 **Plans**: 5 plans
 - [x] 02-01-PLAN.md — Inventory + CDN verify harness + draft ALL copy + heroTagline field activation + approval gate
-- [ ] 02-02-PLAN.md — Experiences: Freelance + Risktec + Piano Teacher entries (CMA)
+- [x] 02-02-PLAN.md — Experiences: Freelance + Risktec + Piano Teacher entries (CMA)
 - [ ] 02-03-PLAN.md — Projects: Music School SaaS lead + Gist AI + SongScope updates; remove Wild Oasis + My Frontend Lib (unlink-before-delete); thumbnail uploads
 - [ ] 02-04-PLAN.md — Hero tagline value + skills + music EP (single read-modify-write) + EP artwork upload
 - [ ] 02-05-PLAN.md — JSX render: ReactMarkdown in Experiences, heroTagline prop, remove Teaching; build + verify all 5 success criteria
@@ -96,7 +96,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation Fixes | 1/2 | In Progress|  |
-| 2. Content Overhaul | 1/5 | In Progress|  |
+| 2. Content Overhaul | 2/5 | In Progress|  |
 | 3. Dark Cinematic Design | 0/? | Not started | - |
 | 4. Scroll Animations | 0/? | Not started | - |
 | 5. Performance & Code Quality | 0/? | Not started | - |

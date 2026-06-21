@@ -19,8 +19,8 @@
 ### Content
 
 - [x] **CONT-01**: Hero copy rewritten — specific role claim with proof of shipping (not "passionate about creating projects end to end")
-- [ ] **CONT-02**: Freelance Software Engineer role added to Experiences (Aug 2025–Present) — Music School SaaS + TalentVibe + Consulting, with achievement bullets covering production billing system, rate-locking pattern, Docker deployment, Stripe Connect, zero-downtime deploy
-- [ ] **CONT-03**: Risktec Software Engineer role added to Experiences (Sep 2024–Aug 2025) — portfolio management system, Figma handoffs, Agile environment, component library rebuild
+- [x] **CONT-02**: Freelance Software Engineer role added to Experiences (Aug 2025–Present) — Music School SaaS + TalentVibe + Consulting, with achievement bullets covering production billing system, rate-locking pattern, Docker deployment, Stripe Connect, zero-downtime deploy
+- [x] **CONT-03**: Risktec Software Engineer role added to Experiences (Sep 2024–Aug 2025) — portfolio management system, Figma handoffs, Agile environment, component library rebuild
 - [ ] **CONT-04**: Gist AI project updated — new description, current stack tags (React, Express, OAuth, Firebase/Firestore), fresh screenshot, working live link
 - [ ] **CONT-05**: Music School SaaS added as lead project card with outcome-first framing (live client, real billing, full stack ownership)
 - [ ] **CONT-06**: SongScope placeholder card added (ML + AI + team lead — full detail when context file arrives)
@@ -33,7 +33,7 @@
 - [ ] **DSGN-02**: Section reorder — Hero → Projects → About → Experiences → Music → Contact (Projects currently buried)
 - [ ] **DSGN-03**: Scroll-triggered entrance animations — framer-motion `whileInView` for section reveals, CSS keyframes for hero mount, `MotionConfig reducedMotion="user"` for accessibility
 - [ ] **DSGN-04**: ProjectCard content hierarchy — name → one-line impact statement → stack tags → image (currently image-first)
-- [ ] **DSGN-05**: Teaching section retired as standalone section — Piano Teacher entry folds into Experiences list, Teaching.jsx removed from layout
+- [x] **DSGN-05**: Teaching section retired as standalone section — Piano Teacher entry folds into Experiences list, Teaching.jsx removed from layout
 
 ### Music
 
@@ -87,14 +87,14 @@
 | BUG-08 | Phase 1 | Pending |
 | PERF-03 | Phase 1 | Pending |
 | CONT-01 | Phase 2 | Complete |
-| CONT-02 | Phase 2 | Pending |
-| CONT-03 | Phase 2 | Pending |
+| CONT-02 | Phase 2 | Complete |
+| CONT-03 | Phase 2 | Complete |
 | CONT-04 | Phase 2 | Pending |
 | CONT-05 | Phase 2 | Pending |
 | CONT-06 | Phase 2 | Pending |
 | CONT-07 | Phase 2 | Pending |
 | CONT-08 | Phase 2 | Pending |
-| DSGN-05 | Phase 2 | Pending |
+| DSGN-05 | Phase 2 | Complete |
 | MUSC-01 | Phase 2 | Pending |
 | MUSC-02 | Phase 2 | Pending |
 | DSGN-01 | Phase 3 | Pending |
