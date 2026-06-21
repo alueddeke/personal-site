@@ -1,4 +1,22 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
+
+const customRenderer = {
+  a: ({ node, ...props }) => (
+    <a
+      {...props}
+      className="text-sky-400 hover:text-sky-600 transition-colors duration-300"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {props.children}
+    </a>
+  ),
+  ul: ({ node, ...props }) => (
+    <ul className="list-disc list-inside mt-2 space-y-1" {...props} />
+  ),
+  li: ({ node, ...props }) => <li className="text-gray-700" {...props} />,
+};
 
 const formatDate = (dateString) => {
   if (!dateString) return "";
@@ -42,9 +60,11 @@ const Experiences = ({ experiences }) => {
                   " - Present"}
               </p>
               {experience.fields.description && (
-                <p className="mt-4 text-gray-700">
-                  {experience.fields.description}
-                </p>
+                <div className="mt-4 text-gray-700">
+                  <ReactMarkdown components={customRenderer}>
+                    {experience.fields.description}
+                  </ReactMarkdown>
+                </div>
               )}
             </div>
           ))}
