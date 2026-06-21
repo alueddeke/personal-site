@@ -73,4 +73,13 @@
 | When | CT version after change | Change |
 |------|-------------------------|--------|
 | Pre-write (Task 1 capture) | 38 | baseline — no heroTagline/epArtwork |
-| _(Task 2 appends here)_ | | add heroTagline + epArtwork, re-activate |
+| Task 2 (draft PUT) | 39 | added `heroTagline` (Symbol) + `epArtwork` (Link/Asset) to fields |
+| Task 2 (activated) | 40 | content type re-activated; both fields live on CDN |
+
+### ⚠ Endpoint correction (carry into all downstream plans)
+
+02-RESEARCH.md Pattern 4 states content types activate via `PUT /content_types/{id}/activated`.
+**That endpoint 404s — it does not exist.** The real CMA endpoint is `PUT /content_types/{id}/published`
+(the Contentful UI labels it "Activate", but the REST path is `/published`; deactivate = `DELETE .../published`).
+Entries also publish via `/entries/{id}/published`, so downstream plans are unaffected for entries — but any
+future content-type change must use `/published`, not `/activated`.
