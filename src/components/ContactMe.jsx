@@ -152,7 +152,7 @@ function ContactMe({ backgroundImage, contact }) {
               <p>antonilueddeke@gmail.com</p>
               <p>
                 <a
-                  href="https://linkedin.com/in/antonilueddeke"
+                  href="https://www.linkedin.com/in/antoni-lueddeke/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"

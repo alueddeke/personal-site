@@ -75,7 +75,6 @@ function App() {
               bio={data.fields.musicBio}
               pictures={data.fields.pictures}
               backgroundImage={findAsset(data.fields.backgrounds, "vinyl")}
-              audioClips={data.fields.audioClips}
               epArtwork={data.fields.epArtwork}
             />
           </div>
