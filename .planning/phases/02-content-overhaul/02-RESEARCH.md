@@ -639,22 +639,21 @@ Phase 2 removes these 4 lines. The `import Teaching from "./components/Teaching"
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
+
+All three questions are resolved by deferral to execution-time state capture: **Plan 02-01 Task 1 GETs the live Contentful state into CONTENTFUL-INVENTORY.md before any write runs**, and every downstream update/delete GETs the entry fresh before mutating. None of these blocks planning — the plans verify live state before acting.
 
 1. **Which existing experience entries are currently in `personalWebsite.experiences`?**
    - What we know: The CDN fetch returns `item.fields.experiences` as a resolved array. There is at least one existing entry (possibly "Piano Teacher" / teaching bio content).
-   - What's unclear: The exact entry IDs and how many experience entries already exist. The executor must GET `personalWebsite` to inspect the current state before writing.
-   - Recommendation: First task in Wave 2 should be a GET of the `personalWebsite` entry and all linked experiences to produce an inventory.
+   - **RESOLVED:** Plan 02-01 Task 1 records the current experiences link ids + titles into CONTENTFUL-INVENTORY.md; Plan 02-02 Task 3 reads that inventory and appends (never overwrites) the new links. Exact IDs are captured at execution time, not needed at plan time.
 
 2. **What are the entry IDs for Wild Oasis and My Frontend Lib `project` entries?**
    - What we know: They have been deleted from Contentful per STATE.md: "Contentful projects: [Gist AI, SongScope]; Wild Oasis + My Frontend Lib deleted".
-   - What's unclear: STATE.md says they were deleted in Plan 03. If true, CONT-07 may already be partially or fully complete. The executor must verify via CDN or CMA GET before attempting deletion.
-   - Recommendation: Wave 1 verification step should confirm current Contentful project set before writing.
+   - **RESOLVED:** Plan 02-01 Task 1 confirms whether they still exist; Plan 02-03 Task 4 handles both cases explicitly — skip if already 404/absent, else run unlink→unpublish→delete. Plan-time uncertainty is absorbed by the conditional in Task 4.
 
 3. **SongScope `project` entry: does it already exist in Contentful from Plan 03?**
    - What we know: STATE.md says "SongScope... carded beside Gist AI" and ROADMAP.md says it was a placeholder card published in Plan 03.
-   - What's unclear: The entry ID and which fields are already populated.
-   - Recommendation: GET the existing SongScope entry to see current field values; CONT-06 is an update (PUT), not a create (POST).
+   - **RESOLVED:** Plan 02-01 Task 1 records the SongScope entry id + version; Plan 02-03 Task 3 treats CONT-06 as an update (GET fresh → full-body PUT → re-publish). If the entry is unexpectedly absent, the executor creates it (POST) per the same task's create path.
 
 ---
 

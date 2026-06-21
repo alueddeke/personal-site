@@ -2,8 +2,8 @@
 phase: 2
 slug: content-overhaul
 status: draft
-nyquist_compliant: false
-wave_0_complete: false
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-06-20
 ---
 
@@ -38,11 +38,11 @@ created: 2026-06-20
 
 | Task ID | Plan | Wave | Requirement | Threat Ref | Secure Behavior | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|------------|-----------------|-----------|-------------------|-------------|--------|
-| 02-01-01 | 01 | 1 | CONT-01 | — | N/A | cdn-assert | `curl -s "https://cdn.contentful.com/spaces/0mufjfcbiiue/environments/master/entries?content_type=personalWebsite&access_token=$VITE_CONTENTFUL_ACCESS_TOKEN" \| grep heroTagline` | ❌ W0 | ⬜ pending |
-| 02-02-01 | 02 | 2 | CONT-02,CONT-03 | — | N/A | cdn-assert | curl experience entries → assert Freelance + Risktec present | ❌ W0 | ⬜ pending |
-| 02-03-01 | 03 | 2 | CONT-04,CONT-05,CONT-06,CONT-07 | — | N/A | cdn-assert | curl entries → assert Music School SaaS / SongScope / Gist AI present, Wild Oasis + My Frontend Lib absent | ❌ W0 | ⬜ pending |
-| 02-04-01 | 04 | 2 | CONT-08,MUSC-01,MUSC-02 | — | N/A | cdn-assert | curl personalWebsite → assert skills array + EP musicBio updated | ❌ W0 | ⬜ pending |
-| 02-05-01 | 05 | 3 | CONT-01,CONT-07,DSGN-05 | — | N/A | build+render | `npm run build` passes; ReactMarkdown bullets render; no `<Teaching />` in App.jsx | ❌ W0 | ⬜ pending |
+| 02-01-01 | 01 | 1 | CONT-01 | — | N/A | cdn-assert | `curl -s "https://cdn.contentful.com/spaces/0mufjfcbiiue/environments/master/entries?content_type=personalWebsite&access_token=$VITE_CONTENTFUL_ACCESS_TOKEN" \| grep heroTagline` | ✅ via 02-01 | ⬜ pending |
+| 02-02-01 | 02 | 2 | CONT-02,CONT-03 | — | N/A | cdn-assert | curl experience entries → assert Freelance + Risktec present | ✅ via 02-01 | ⬜ pending |
+| 02-03-01 | 03 | 2 | CONT-04,CONT-05,CONT-06,CONT-07 | — | N/A | cdn-assert | curl entries → assert Music School SaaS / SongScope / Gist AI present, Wild Oasis + My Frontend Lib absent | ✅ via 02-01 | ⬜ pending |
+| 02-04-01 | 04 | 2 | CONT-08,MUSC-01,MUSC-02 | — | N/A | cdn-assert | curl personalWebsite → assert skills array + EP musicBio updated | ✅ via 02-01 | ⬜ pending |
+| 02-05-01 | 05 | 3 | CONT-01,CONT-07,DSGN-05 | — | N/A | build+render | `npm run build` passes; ReactMarkdown bullets render; no `<Teaching />` in App.jsx | ✅ via 02-01 | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -71,11 +71,11 @@ created: 2026-06-20
 
 ## Validation Sign-Off
 
-- [ ] All tasks have an automated CDN-assert/build verify or a Wave 0 dependency
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references (none — harness is CDN API + build)
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 20s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have an automated CDN-assert/build verify or a Wave 0 dependency
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references (none — harness is the verify-cdn.sh script created in Plan 02-01 Task 1 + `npm run build`)
+- [x] No watch-mode flags
+- [x] Feedback latency < 20s
+- [x] `nyquist_compliant: true` set in frontmatter
 
-**Approval:** pending
+**Approval:** approved 2026-06-20
