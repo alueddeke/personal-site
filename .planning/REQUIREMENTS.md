@@ -21,10 +21,10 @@
 - [x] **CONT-01**: Hero copy rewritten — specific role claim with proof of shipping (not "passionate about creating projects end to end")
 - [x] **CONT-02**: Freelance Software Engineer role added to Experiences (Aug 2025–Present) — Music School SaaS + TalentVibe + Consulting, with achievement bullets covering production billing system, rate-locking pattern, Docker deployment, Stripe Connect, zero-downtime deploy
 - [x] **CONT-03**: Risktec Software Engineer role added to Experiences (Sep 2024–Aug 2025) — portfolio management system, Figma handoffs, Agile environment, component library rebuild
-- [ ] **CONT-04**: Gist AI project updated — new description, current stack tags (React, Express, OAuth, Firebase/Firestore), fresh screenshot, working live link
-- [ ] **CONT-05**: Music School SaaS added as lead project card with outcome-first framing (live client, real billing, full stack ownership)
-- [ ] **CONT-06**: SongScope placeholder card added (ML + AI + team lead — full detail when context file arrives)
-- [ ] **CONT-07**: Wild Oasis and My Frontend Lib removed from Contentful CMS and codebase
+- [x] **CONT-04**: Gist AI project updated — new description, current stack tags (React, Express, OAuth, Firebase/Firestore), fresh screenshot, working live link
+- [x] **CONT-05**: Music School SaaS added as lead project card with outcome-first framing (live client, real billing, full stack ownership)
+- [x] **CONT-06**: SongScope placeholder card added (ML + AI + team lead — full detail when context file arrives)
+- [x] **CONT-07**: Wild Oasis and My Frontend Lib removed from Contentful CMS and codebase
 - [ ] **CONT-08**: Skills section updated — AWS Cloud Practitioner cert, React Native / Expo (mobile), AI/ML stack (OpenAI API, XGBoost, recommendation systems), Docker / Docker Compose / GitHub Actions CI/CD / DigitalOcean / Nginx
 
 ### Design
@@ -89,10 +89,10 @@
 | CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Complete |
 | CONT-03 | Phase 2 | Complete |
-| CONT-04 | Phase 2 | Pending |
-| CONT-05 | Phase 2 | Pending |
-| CONT-06 | Phase 2 | Pending |
-| CONT-07 | Phase 2 | Pending |
+| CONT-04 | Phase 2 | Complete |
+| CONT-05 | Phase 2 | Complete |
+| CONT-06 | Phase 2 | Complete |
+| CONT-07 | Phase 2 | Complete |
 | CONT-08 | Phase 2 | Pending |
 | DSGN-05 | Phase 2 | Complete |
 | MUSC-01 | Phase 2 | Pending |
