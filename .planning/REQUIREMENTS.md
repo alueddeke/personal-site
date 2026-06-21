@@ -18,7 +18,7 @@
 
 ### Content
 
-- [ ] **CONT-01**: Hero copy rewritten — specific role claim with proof of shipping (not "passionate about creating projects end to end")
+- [x] **CONT-01**: Hero copy rewritten — specific role claim with proof of shipping (not "passionate about creating projects end to end")
 - [ ] **CONT-02**: Freelance Software Engineer role added to Experiences (Aug 2025–Present) — Music School SaaS + TalentVibe + Consulting, with achievement bullets covering production billing system, rate-locking pattern, Docker deployment, Stripe Connect, zero-downtime deploy
 - [ ] **CONT-03**: Risktec Software Engineer role added to Experiences (Sep 2024–Aug 2025) — portfolio management system, Figma handoffs, Agile environment, component library rebuild
 - [ ] **CONT-04**: Gist AI project updated — new description, current stack tags (React, Express, OAuth, Firebase/Firestore), fresh screenshot, working live link
@@ -86,7 +86,7 @@
 | BUG-07 | Phase 1 | Pending |
 | BUG-08 | Phase 1 | Pending |
 | PERF-03 | Phase 1 | Pending |
-| CONT-01 | Phase 2 | Pending |
+| CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Pending |
 | CONT-03 | Phase 2 | Pending |
 | CONT-04 | Phase 2 | Pending |

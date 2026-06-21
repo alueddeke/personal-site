@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: Phase 2 context gathered
-last_updated: "2026-06-21T14:48:09.251Z"
-last_activity: 2026-06-21 -- Phase 02 planning complete
+last_updated: "2026-06-21T15:01:04.862Z"
+last_activity: 2026-06-21
 progress:
   total_phases: 5
   completed_phases: 1
   total_plans: 8
-  completed_plans: 3
+  completed_plans: 4
   percent: 20
 ---
 
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-19)
 
 **Core value:** A recruiter who clicks the link should immediately understand Antoni ships real production software — and want to reach out within minutes.
-**Current focus:** Phase 1 — foundation-fixes
+**Current focus:** Phase 02 — content-overhaul
 
 ## Current Position
 
-Phase: 1 (foundation-fixes) — COMPLETE (3 plans)
-Plan: 3 of 3 done
+Phase: 02 (content-overhaul) — EXECUTING
+Plan: 2 of 5
 Status: Ready to execute
-Last activity: 2026-06-21 -- Phase 02 planning complete
+Last activity: 2026-06-21
 
 Progress: [██░░░░░░░░] 20%
 
