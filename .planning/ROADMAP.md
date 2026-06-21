@@ -12,7 +12,7 @@ A five-phase brownfield refresh of an existing React + Vite + Tailwind + Content
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation Fixes** - Fix every broken or professionally embarrassing thing before design work ships
+- [x] **Phase 1: Foundation Fixes** - Fix every broken or professionally embarrassing thing before design work ships (completed)
 - [x] **Phase 2: Content Overhaul** - Replace all stale content with current career evidence in Contentful CMS (completed 2026-06-21)
 - [ ] **Phase 3: Dark Cinematic Design** - New Tailwind tokens, section reorder, component restyling
 - [ ] **Phase 4: Scroll Animations** - framer-motion whileInView reveals, hero CSS entrance, reduced-motion support
@@ -31,9 +31,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The Gist AI project card's "live link" opens a working deployed application on Netlify
   4. The ContactMe section shows both the form (left column) and contact information (right column) fully rendered
   5. The browser dev tools console shows zero log output when browsing the production site
-**Plans**: 2 plans
+**Plans**: 3 plans
 - [x] 01-01-PLAN.md — Mobile nav, ContactMe two-column fix, OG/SEO tags, footer year, console.log + hidden-input hygiene
-- [ ] 01-02-PLAN.md — Deploy Gist AI Next.js app to a new Netlify site and update the Contentful project card URL
+- [x] 01-02-PLAN.md — Deploy Gist AI Next.js app to a new Netlify site and update the Contentful project card URL
+- [x] 01-03-PLAN.md — SongScope demo-mode deploy (Render + Netlify) and project card wiring
 **UI hint**: yes
 
 ### Phase 2: Content Overhaul
