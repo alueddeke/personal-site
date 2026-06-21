@@ -86,6 +86,17 @@ ProjectCard.jsx renders imageless cards safely (`thumbnail &&` guard) — Music 
 
 ---
 
+## Plan 02-04 writes (hero / skills / music) — DONE; EP artwork DEFERRED
+
+Single read-modify-write of `personalWebsite` → re-published **v117**:
+- `heroTagline` set to approved proof-led line (no "passionate").
+- `skills` replaced with merged D-11 array (AWS Cloud Practitioner, React Native / Expo, Docker, Docker Compose, GitHub Actions CI/CD, DigitalOcean, Nginx, SSL, OpenAI API, XGBoost, Recommendation Systems + existing).
+- `musicBio` → EP "Why We're Living" + Spotify album URL.
+- `epArtwork` **NOT set** — deferred (file `contentful/ep-artwork/why-we-are-living.jpg` not in repo).
+- `pictures` (performance photos) untouched — 11 entries before and after (MUSC-02). ✓
+
+---
+
 ## Fields relevant to downstream plans
 
 - **skills (current value):** `['React', 'NextJS', 'Typescript', 'Redux', 'CSS', 'SCSS', 'Tailwind CSS', 'Python', 'Django', 'MySQL', 'Data Structures', 'KnexJS', 'REST API', 'GraphQL', 'Agile Development', 'Content Management Systems']` — 02-04 merges in the D-11 additions.
