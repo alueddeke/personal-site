@@ -25,7 +25,7 @@
 - [x] **CONT-05**: Music School SaaS added as lead project card with outcome-first framing (live client, real billing, full stack ownership)
 - [x] **CONT-06**: SongScope placeholder card added (ML + AI + team lead — full detail when context file arrives)
 - [x] **CONT-07**: Wild Oasis and My Frontend Lib removed from Contentful CMS and codebase
-- [ ] **CONT-08**: Skills section updated — AWS Cloud Practitioner cert, React Native / Expo (mobile), AI/ML stack (OpenAI API, XGBoost, recommendation systems), Docker / Docker Compose / GitHub Actions CI/CD / DigitalOcean / Nginx
+- [x] **CONT-08**: Skills section updated — AWS Cloud Practitioner cert, React Native / Expo (mobile), AI/ML stack (OpenAI API, XGBoost, recommendation systems), Docker / Docker Compose / GitHub Actions CI/CD / DigitalOcean / Nginx
 
 ### Design
 
@@ -37,8 +37,8 @@
 
 ### Music
 
-- [ ] **MUSC-01**: Music section updated with EP "Why We're Living" — title, artwork, Spotify link (https://open.spotify.com/album/28d3TgbRj5Y0a7URbWWdgc)
-- [ ] **MUSC-02**: Existing performance photos kept — shows real musician identity, not just hobbyist
+- [x] **MUSC-01**: Music section updated with EP "Why We're Living" — title, artwork, Spotify link (https://open.spotify.com/album/28d3TgbRj5Y0a7URbWWdgc)
+- [x] **MUSC-02**: Existing performance photos kept — shows real musician identity, not just hobbyist
 
 ### Performance & Code Quality
 
@@ -93,10 +93,10 @@
 | CONT-05 | Phase 2 | Complete |
 | CONT-06 | Phase 2 | Complete |
 | CONT-07 | Phase 2 | Complete |
-| CONT-08 | Phase 2 | Pending |
+| CONT-08 | Phase 2 | Complete |
 | DSGN-05 | Phase 2 | Complete |
-| MUSC-01 | Phase 2 | Pending |
-| MUSC-02 | Phase 2 | Pending |
+| MUSC-01 | Phase 2 | Complete |
+| MUSC-02 | Phase 2 | Complete |
 | DSGN-01 | Phase 3 | Pending |
 | DSGN-02 | Phase 3 | Pending |
 | DSGN-04 | Phase 3 | Pending |
