@@ -61,6 +61,31 @@
 
 ---
 
+## Plan 02-03 writes (projects) — DONE (text); assets DEFERRED
+
+| Entry | id | action | published version | thumbnail |
+|-------|-----|--------|-------------------|-----------|
+| Music School SaaS (lead) | `1Q969EEJWfmx6dTTKswqMa` | created | v2 | **none — deferred** |
+| SongScope | `n3uOcC5mxAge26UBfvomI` | updated (real card) | v6 | existing kept |
+| Gist AI | `38BNsImyxunYKuC2cZut71` | updated | v33 | existing kept (old screenshot) |
+
+`personalWebsite` re-published **v115**; projects = exactly [Music School SaaS, SongScope, Gist AI], no notResolvable errors. Wild Oasis / My Frontend Lib confirmed absent (no deletion needed — A1).
+
+### ⏸ DEFERRED asset uploads (image files not yet in repo)
+
+Per "functional draft ASAP" directive — push when files land, then upload via RESEARCH Pattern 5 and re-point the entry `thumbnail` (Music School) / `epArtwork` (EP):
+
+| File needed | Target | Plan |
+|-------------|--------|------|
+| `contentful/thumbnails/MusicSchool_Thumbnail.png` | Music School SaaS `thumbnail` | 02-03 Task 2 (deferred) |
+| `contentful/thumbnails/SongScope_Thumbnail.png` | replace SongScope `thumbnail` (optional refresh) | 02-03 Task 2 (deferred) |
+| `contentful/thumbnails/GistAI_Thumbnail_New.png` | replace Gist AI `thumbnail` (CONT-04 fresh shot) | 02-03 Task 2 (deferred) |
+| `contentful/ep-artwork/why-we-are-living.jpg` | `personalWebsite.epArtwork` | 02-04 (deferred) |
+
+ProjectCard.jsx renders imageless cards safely (`thumbnail &&` guard) — Music School shows an empty image area until its thumbnail lands.
+
+---
+
 ## Fields relevant to downstream plans
 
 - **skills (current value):** `['React', 'NextJS', 'Typescript', 'Redux', 'CSS', 'SCSS', 'Tailwind CSS', 'Python', 'Django', 'MySQL', 'Data Structures', 'KnexJS', 'REST API', 'GraphQL', 'Agile Development', 'Content Management Systems']` — 02-04 merges in the D-11 additions.
